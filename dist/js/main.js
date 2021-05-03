@@ -4,6 +4,7 @@ var app = new Vue({
     el: '#root',
     data: {
       albums : [],
+      search: "",
       albumsGenre : [],
       select : "All"
     },
