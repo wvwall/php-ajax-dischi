@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.card{
+	width:200px;
+	height:200px;
+	position:relative;
+    margin:  20px;
+	-webkit-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+    
+}
+#root{
+	-webkit-perspective:1000;
+	-moz-perspective:1000;
+	-o-perspective:1000;
+	perspective:1000;
+	position:relative;
+	width: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background-image: url("../img/music.jpg");
+    background-size: cover; */
+   /*  background-image: linear-gradient(to left top,
+     #1ad260, #00bda0, #00a1ce,
+     #0080d8, #0058b8, #4745a9, 
+     #642e95, #76047c, #a00074,
+      #c30066, #df0053, #f2243b); */
+    /* background-image: linear-gradient(to right bottom, 
+    #1ad260, #00c9aa, #00b9ec,
+     #00a0ff, #007bff, #6465f6,
+     #9247e4, #b500c9, #d600ad,
+      #ea1093, #f3387e, #f5566e); */
+    background-image: linear-gradient(to right top,
+     #1ad260, #00cd91, #00c4b6,
+      #00b9ca, #00acce, #06a4d7,
+     #369add, #5c8edc, #967ed7,
+      #c768bf, #e85295, #f34a61);
+}
+.front, .back{
+	width:100%;
+	height:100%;
+	position:absolute;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-transition:-webkit-transform 800ms;
+	transition:-webkit-transform 600ms;
+	transition:transform 600ms;
+	transition:transform 600ms, -webkit-transform 600ms;
+	-webkit-transition-timing-function:ease-in-out;
+	transition-timing-function:ease-out;
+	-webkit-transform-origin:center center;
+	transform-origin:center center;
+    border-radius: 5px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+.card .front{
+	width: 200px;
+    height: 200px;
+    background-size: cover;
+	-webkit-transform:rotateY(0deg);
+	transform:rotateY(0deg);
+}
+.card .back{
+    background-image: url("../img/vinile.jpg");
+    background-size: cover;
+	/* background:#1b0000; */
+	-webkit-transform:rotateY(180deg);
+	transform:rotateY(180deg);
+    
+}
+.info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+}
+.title,
+.year,
+.author,
+.genre {
+   margin-left: 34%;
+   font-size: 13px;
+}
+.title,
+.author {
+    font-weight: 700;
+    
+}
+.info i {
+    font-size: 25px;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.info i:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.spoty {
+    background-color:#1AD260;
+}
+.apple {
+    background: linear-gradient(to bottom,#F5566E,#F2243B);
+}
+.amaz {
+    background: linear-gradient(to bottom,#4201F7,#2E1D7A);
+}
+.card-icon span {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-icon {
+    display: flex;
+    justify-content: space-around;
+}
+.card:hover .front {
+	-webkit-transform:rotateY(-180deg);
+	transform:rotateY(-180deg);
+}
+.card:hover .back {
+	-webkit-transform:rotateY(0deg);
+	transform:rotateY(0deg);
+}
+.card:active .front {
+	-webkit-transform:rotateY(-180deg);
+	transform:rotateY(-180deg);
+}
+.card:active .back {
+	-webkit-transform:rotateY(0deg);
+	transform:rotateY(0deg);
+}
+
+#nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.22);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#nav img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+select {
+    background: linear-gradient(to right bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2));
+    color: #fff;
+    width: 75px;
+    height: 25px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform:capitalize;
+    font-weight: 600;
+    font-size: 14px;
+}
+ #nav h1 {
+     color:#fff;
+     text-transform: lowercase;
+     font-family: 'Train One', cursive;
+ }
