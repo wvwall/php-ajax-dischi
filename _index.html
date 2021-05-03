@@ -24,15 +24,15 @@
         <div id="nav" >
             <img src="./dist/img/channels4_profile.jpg" alt="">
             <h1>vinyls</h1>
-            <select v-model="select" @click="selectGenre" id="album">
+            <select v-model="select" @click="searchArtist" id="album">
                 <option >All</option>
-                <option v-for="genre in albumsGenre">{{genre}}</option>
+                <option v-for="artist in albumsArtist">{{artist}}</option>
              </select> 
         </div>
 
         <!-- CARDS -->
 
-        <div class="card" v-for="album in albums" v-if="album.genre == select || select === 'All'">
+        <div class="card" v-for="album in albums" v-if="album.author == select || select === 'All'">
             <div class="front" :style="`background-image: url('${album.poster}')`">  
             </div>
             <div class="back" >
