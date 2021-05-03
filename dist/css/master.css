@@ -38,11 +38,12 @@
      #00a0ff, #007bff, #6465f6,
      #9247e4, #b500c9, #d600ad,
       #ea1093, #f3387e, #f5566e); */
-    background-image: linear-gradient(to right top,
+    /* background-image: linear-gradient(to right top,
      #1ad260, #00cd91, #00c4b6,
       #00b9ca, #00acce, #06a4d7,
      #369add, #5c8edc, #967ed7,
-      #c768bf, #e85295, #f34a61);
+      #c768bf, #e85295, #f34a61); */
+      background-color: #7377AD;
 }
 .front, .back{
 	width:100%;
